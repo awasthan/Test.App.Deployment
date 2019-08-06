@@ -15,7 +15,7 @@ contexts:
   name: ""
 - context:
     cluster: mycluster
-    namespace: ace
+    namespace: default
     user: admin
   name: mycluster-context
 current-context: mycluster-context
