@@ -5,55 +5,15 @@ clusters:
     server: https://icp-console.9.204.169.185.nip.io:8443
   name: mycluster
 - cluster:
-    certificate-authority: mycluster/ca.pem
+    insecure-skip-tls-verify: true
     server: https://prod2-master.fyre.ibm.com:8443
   name: prod2-master-fyre-ibm-com:8443
 contexts:
 - context:
     cluster: prod2-master-fyre-ibm-com:8443
-    namespace: ace
-    user: admin/prod2-master-fyre-ibm-com:8443
-  name: ace/prod2-master-fyre-ibm-com:8443/admin
-- context:
-    cluster: prod2-master-fyre-ibm-com:8443
-    namespace: apic
-    user: admin/prod2-master-fyre-ibm-com:8443
-  name: apic/prod2-master-fyre-ibm-com:8443/admin
-- context:
-    cluster: prod2-master-fyre-ibm-com:8443
     namespace: default
     user: admin/prod2-master-fyre-ibm-com:8443
   name: default/prod2-master-fyre-ibm-com:8443/admin
-- context:
-    cluster: prod2-master-fyre-ibm-com:8443
-    namespace: default
-    user: system:admin/prod2-master-fyre-ibm-com:8443
-  name: default/prod2-master-fyre-ibm-com:8443/system:admin
-- context:
-    cluster: prod2-master-fyre-ibm-com:8443
-    namespace: demo-apic
-    user: admin/prod2-master-fyre-ibm-com:8443
-  name: demo-apic/prod2-master-fyre-ibm-com:8443/admin
-- context:
-    cluster: prod2-master-fyre-ibm-com:8443
-    namespace: eventstreams
-    user: admin/prod2-master-fyre-ibm-com:8443
-  name: eventstreams/prod2-master-fyre-ibm-com:8443/admin
-- context:
-    cluster: prod2-master-fyre-ibm-com:8443
-    namespace: integration
-    user: admin/prod2-master-fyre-ibm-com:8443
-  name: integration/prod2-master-fyre-ibm-com:8443/admin
-- context:
-    cluster: prod2-master-fyre-ibm-com:8443
-    namespace: mq
-    user: admin/prod2-master-fyre-ibm-com:8443
-  name: mq/prod2-master-fyre-ibm-com:8443/admin
-- context:
-    cluster: prod2-master-fyre-ibm-com:8443
-    namespace: mwallet-app
-    user: admin/prod2-master-fyre-ibm-com:8443
-  name: mwallet-app/prod2-master-fyre-ibm-com:8443/admin
 - context:
     cluster: mycluster
     namespace: default
@@ -65,14 +25,7 @@ preferences: {}
 users:
 - name: admin
   user:
-    token: 58wzGgO_-BOCHYLoSTq-M13kgsccRllYAnJr55MCf_iT
+    token: BFP4ZnKLdKUJReSXkzhHNK1jp-dFH9Huo7oaKy03B5nQ
 - name: admin/prod2-master-fyre-ibm-com:8443
   user:
-    token: g3-QWqrN25638GuoA8ObQ0p2llee9fq6y6q2ZrldiN8
-- name: mycluster-user
-  user:
-    token: OLKS0JI5ZJ1IrOfbIIFQM0fTbblji1NZ2utWIOkT4ywb
-- name: system:admin/prod2-master-fyre-ibm-com:8443
-  user:
-    client-certificate-data: REDACTED
-    client-key-data: REDACTED
+    token: GDr5uUJkNpoIkIBCWr7evUpMfJtfHkXORm75UWCBpaw
