@@ -38,12 +38,15 @@ spec:
   type: NodePort
   ports:
     - name: webui
+      nodePort: 31304
       port: 7600
       targetPort: 7600
     - name: http
+      nodePort: 31305
       port: 7800
       targetPort: 7800
     - name: https
+      nodePort: 31306
       port: 7843
       targetPort: 7843
   selector:
