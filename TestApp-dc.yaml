@@ -57,4 +57,4 @@ spec:
       port: 7843
       targetPort: 7843
   selector:
-   app: $appname
+   name: $appname
